@@ -3,49 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロフィール</title>
+    <title>Circle Images</title>
     <style>
         body {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
+            background-color: #f0f0f0;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* 背景色を設定 */
-            background-image: url('./images/rabbit.png');
-            background-size: cover; 
-            background-position: center; 
         }
-        .profile-image {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .circle img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            background-color: #fff; /* 画像の背景色を設定 */
-            padding: 10px; /* 画像の周りに余白を追加 */
-        }
-        .profile-name {
-            margin-top: 10px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #000;
         }
     </style>
 </head>
 <body>
-    <img src="./images/matsuken.png" alt="プロフィール画像" class="profile-image">
-    <div class="profile-name">まつけん</div>
-    <div class="social-links">
-        <a href="https://note.com/matsuken_rabbit/" target="_blank">まつけんのnote</a>
+    <div class="container">
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 1"></div>
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 2"></div>
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 3"></div>
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 4"></div>
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 5"></div>
+        <div class="circle"><img src="./images/matsuken.png" alt="Image 6"></div>
     </div>
 </body>
 </html>
